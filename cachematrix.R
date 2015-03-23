@@ -3,7 +3,7 @@
 
 ## Creates a list of functions to set and get cached inverse matrix
 
-makeCacheMatrixList <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
     I <- NULL
     set <- function(y) {
         x <<- y
@@ -20,7 +20,7 @@ makeCacheMatrixList <- function(x = matrix()) {
 
 
 ## Return a matrix that is the inverse of 'x'(matrix as above)
-## Takes as input the list of functions created by makeCacheMatrixList
+## Takes as input the list of functions created by makeCacheMatrix
 ## Will solve and setinverse() if inverse is not yet stored
 
 cacheSolve <- function(xlist, ...) {
